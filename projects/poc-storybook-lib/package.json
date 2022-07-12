@@ -1,0 +1,19 @@
+{
+  "name": "poc-storybook-lib",
+  "version": "1.0.2",
+  "description": "Desing System Asco Poc",
+  "homepage": "https://github.com/ChrysPineirosP/poc-asco-lib-ds#readme",
+  "author": {
+    "name" : "Christian Pineiros",
+    "email" : "christian.pineiros@thoughtworks.com",
+    "url" : "https://github.com/ChrysPineirosP"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^11.2.14",
+    "@angular/core": "^11.2.14"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

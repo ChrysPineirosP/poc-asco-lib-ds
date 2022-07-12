@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "2e62dfb7-7e11-4974-aa92-4a64783cdf2c"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -119,6 +122,46 @@
             "production": {
               "devServerTarget": "poc-storybook-app-master:serve:production"
             }
+          }
+        }
+      }
+    },
+    "poc-storybook-lib": {
+      "projectType": "library",
+      "root": "projects/poc-storybook-lib",
+      "sourceRoot": "projects/poc-storybook-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/poc-storybook-lib/tsconfig.lib.json",
+            "project": "projects/poc-storybook-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/poc-storybook-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/poc-storybook-lib/src/test.ts",
+            "tsConfig": "projects/poc-storybook-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/poc-storybook-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/poc-storybook-lib/tsconfig.lib.json",
+              "projects/poc-storybook-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
