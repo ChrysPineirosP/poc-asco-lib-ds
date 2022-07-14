@@ -9,7 +9,7 @@ jobs:
       - name: Installing Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '12.22.12'
       - run: npm install -g @angular/cli@11.2.5
       - run: npm install
       - run: npm run build poc-storybook-lib -—prod
