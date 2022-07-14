@@ -12,12 +12,12 @@ jobs:
           node-version: '18'
       - run: npm install -g @angular/cli@11.2.5
       - run: npm install
-      - run: ng build --project=poc-storybook-library
+      - run: ng build --project=poc-storybook-lib
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
         with:
           semantic_version: 19.0.3
-          working_directory: ./dist/poc-storybook-library
+          working_directory: ./dist/poc-storybook-lib
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
