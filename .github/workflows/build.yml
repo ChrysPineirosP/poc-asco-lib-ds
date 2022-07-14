@@ -12,7 +12,7 @@ jobs:
           node-version: '18'
       - run: npm install -g @angular/cli@11.2.5
       - run: npm install
-      - run: ng build --project=poc-storybook-lib
+      - run: npm run build poc-storybook-lib -—prod
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
         with:
