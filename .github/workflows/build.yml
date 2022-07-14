@@ -10,7 +10,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: npm install -g @angular/cli
+      - run: npm install -g @angular/cli@11.2.5
       - run: npm install
       - run: ng build --project=poc-storybook-library
       - name: Semantic Release
